@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<title>Nikita gallery</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	<!-- подключение дополнительного шрифта-->
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
+	
+	<!-- подключение лайтбокса для изобрвжений-->
+	<link rel="stylesheet" type="text/css" href="fancybox-master/dist/jquery.fancybox.min.css">
+
+
+	<!-- <script src="//code.jquery.com/jquery-3.2.1.min.js"></script> -->
+	<script
+	src="http://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"> 
+	</script>
+
+
+</head>
+
+<!-- скрипт для сворачивающегося меню -->
+<script>   
+		//https://getinstance.info/articles/css/responsive-menu/
+		(function($){
+		  $(function() {
+		    $('.menu__icon').on('click', function() {
+		$(this).closest('.menu').toggleClass('menu_state_open');
+		    });
+		  });
+		})(jQuery);
+		
+</script>
+
+
+<body>
+	<div id="namediv">
+		<p id="nameofsite">Multimedia gallery</p>
+	</div>
+
+	<div id="header">
+
+		<div class="menu">
+		    <div class="menu__icon">
+		      <span></span>
+		      <span></span>
+		      <span></span>
+		      <span></span>
+		    </div>
+  
+		    <div class="menu__links">
+		        <a class="menu__links-item" href="index.html">INFO</a>
+		        <a class="menu__links-item" href="pictures.html">PICTURES</a>
+		        <a class="menu__links-item" href="videos.html">VIDEOS</a>
+		        <a class="menu__links-item" href="/">user</a>
+		    </div>
+		</div>
+		
+
+
+		
+	</div>
+
+	
+	
+	<div id="maindiv">
+		
+		
+		<div class="zgl"><h1>About videos</h1></div>
+	
+		<div id="abzacvideochu"><h2>Videos are like a beautiful picture that moves and may even speak. By clicking on a video that you would like to watch you consume information about a story that it shows. Much like in the picture gallery where every picture also is telling its own story, the video gallery acts the same way. Leaving a like and writing a comment is much appreciated.</h2>
+		<br>
+		<br>
+
+		
+
+		<!--  галерея =====================================================  --> 
+		<div id="gallbox">
+			<!-- <div class="pik4a">
+				<a href="pics/BLACK 2.png">
+				<img src="pics/BLACK 2.png">
+				</a>
+			</div>
+
+			<div class="pik4a">
+				<a href="pics/Hart.png">
+				<img src="pics/Hart.png">
+				</a>
+			</div>
+
+			 -->
+
+			<!-- вывод видеороликов из папки vi javascript-->
+			<!-- http://qaru.site/questions/147772/how-to-load-all-the-images-from-one-of-my-folder-into-my-web-page-using-jqueryjavascript -->
+			<script>
+				var folder = "vi/";
+				var sfolder = "vp/";
+				var prv = ".png";
+				
+
+				$.ajax({
+
+				    url : folder,
+				    success: function (data) {
+				        $(data).find("a").attr("href", function (i, val) {
+				        	//if( val.match(/\.(jpe?g|png|gif|avi|mkv|mp4)$/) ) { 
+				        	if( val.match(/\.(avi|mkv|mp4)$/) ) { 
+				            //if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+				                
+				                $("#gallbox").append( "<div class='pik4a'><a href='"+ folder + val + "' data-fancybox='gallbox' data-caption='"+ folder + val + "'><img src='"+ folder + prv +"'></a></div>" );
+
+				                //$("#gallbox").append( "<div class='pik4a'><a href='"+ folder + val + "' data-fancybox='gallbox' data-caption='"+ folder + val + "'><img src='"+ sfolder + val +"' preload='metadata'></a></div>" );
+				                
+				            } 
+				        });
+				    }
+				});
+
+				//========================================================================
+
+				
+			</script>
+
+			<!-- скрипт для лайтбокса -->
+			<script src="fancybox-master/dist/jquery.fancybox.min.js"></script>
+
+			
+		</div>
+
+		
+
+		
+
+
+
+
+		
+		</div>
+
+
+		<!-- <p class="zgl">Picture gallery</p> -->
+
+
+
+
+
+
+	
+
+	
+	
+
+		<div id="footer">
+			<p style="font-size:14pt;display: inline-block;">Copyright@ NK all rights resereved!</p>
+			<div id="footerblock"><p>[music]</p></div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>
