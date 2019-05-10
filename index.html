@@ -5,6 +5,7 @@
 	
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
 	<!-- <link href="css/bootstrap.css" rel="stylesheet">-->
@@ -50,9 +51,10 @@
 		    </div>
   
 		    <div class="menu__links">
-		        <a class="menu__links-item" href="index.html">INFO</a>
+		        <a class="menu__links-item" href="index.html">HOME</a>
 		        <a class="menu__links-item" href="#pictures">PICTURES</a>
 		        <a class="menu__links-item" href="#videos">VIDEOS</a>
+		        <a class="menu__links-item" href="#muziq">MUSIC</a>
 		        <a class="menu__links-item" href="#user">user</a>
 		    </div>
 		</div>
@@ -68,7 +70,7 @@
 
 		<div class="zgl" id="info"><h1>Info</h1></div>
 		
-		<div id="abzacinfo"><h2>Lorem, ipsum vitae diam porttitor, congue nam eu, quisque porttitor rutrum proin odio sodales auctor ornare: nulla, porttitor enim: donec adipiscing. Sit eros risus maecenas vitae, elementum ornare, at, lorem gravida fusce curabitur pellentesque.</h2>
+		<div id="abzacinfo"><h2>This application is used for media viewing and sharing across users social networks. User can make his own gallery by uploading files into it and then viewing them from inside of the application. The aplication version may change in the futur and have newer versions of it avalable.</h2>
 
 			
 			
@@ -80,7 +82,46 @@
 		
 		<div id="abzacpics"><h2>Picture gallery is a place where you can view all sorts of beautiful images, pictures, photos  and art work! If you see anything you like you can leave a comment and a like or even a dislike something if you want. You can view the image in a larger size by clicking on it and enjoy the scenery. If you have something to say to the creator of the image you can write a comment just below the image you are looking at, leave a like or even a dislike if you wish so.</h2>
 
-			<iframe width="100%" height="1080" frameborder="no" src="http://omxicarpet.000webhostapp.com/picsoutside-server/pik4ez.html"></iframe>
+
+
+			<iframe width="100%" height="800" frameborder="no" src="http://omxicarpet.000webhostapp.com/picsoutside/"></iframe>
+			<!-- <div id="picsoutsidee" style="width: 100%; height: 800px; border: 1px solid #000;"></div>
+			<script>
+				$( "#picsoutsidee" ).load( "http://tecttect.000webhostapp.com/wwwpicsoutside-server/" );
+			</script>  -->
+
+			<!-- вызов файлового менеджера KCfinder для удаления и добавления картинок -->
+			<script type="text/javascript">
+
+			function openKCFinder(field) {
+			    var div = document.getElementById('kcfinder_div');
+			    if (div.style.display == "block") {
+			        div.style.display = 'none';
+			        div.innerHTML = '';
+			        return;
+			    }
+			    window.KCFinder = {
+			        callBack: function(url) {
+			            window.KCFinder = null;
+			            field.value = url;
+			            div.style.display = 'none';
+			            div.innerHTML = '';
+			        }
+			    };
+			    /*div.innerHTML = '<iframe name="kcfinder_iframe" src="/demo/kcfinder/browse.php?type=files&dir=files/public" ' +
+			        'frameborder="0" width="100%" height="100%" marginwidth="0" marginheight="0" scrolling="no" />';*/
+
+
+			    div.innerHTML = '<iframe name="kcfinder_iframe" src="http://omxicarpet.000webhostapp.com/picsoutside/kcfinder/browse.php" ' +
+			        'frameborder="0" width="100%" height="100%" marginwidth="0" marginheight="0" scrolling="no" />';
+			    div.style.display = 'block';
+			}
+
+			</script>
+			 
+			<!-- Selected file: -->
+			<input type="text" readonly="readonly" value="Administration" onclick="openKCFinder(this)" style="text-align: center;height:40px;width:100px;cursor:pointer" /><br />
+			<div id="kcfinder_div"></div>
 			
 		</div>
 
@@ -89,17 +130,20 @@
 		
 		<div id="abzacvideo"><h2>Videos are like a beautiful picture that moves and may even speak. By clicking on a video that you would like to watch you consume information about a story that it shows. Much like in the picture gallery where every picture also is telling its own story, the video gallery acts the same way. Leaving a like and writing a comment is much appreciated.</h2>
 
-			<iframe width="100%" height="315" src="https://www.youtube.com/embed/E2Q52cVx7Bo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<br>
+			
 			<iframe width="100%" height="315" src="https://www.youtube.com/embed/MKVvM5xEFFc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<br>
-			<iframe width="100%" height="315" src="https://www.youtube.com/embed/Jwkoo9k1tsg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<br>
+			
 			<iframe width="100%" height="315" src="https://www.youtube.com/embed/ciM1bSV_0qs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<br>
+			<iframe width="100%" height="315" src="https://www.youtube.com/embed/8cgp2WNNKmQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<br>
+			
+			<iframe width="100%" height="315" src="https://www.youtube.com/embed/j_dey8YBKjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 
 
-		<div class="zgl"><h1>About music</h1></div>
+		<div class="zgl" id="muziq"><h1>About music</h1></div>
 		
 		<div id="abzacmusic"><h2>Music is a great way to adjust your emotions and feel the mood you are in at the time. Try pressing the button at the corner of the screen and select the music that you feel is appropriate for your mood right now.  Music can also make your mood so don't be shy to of using the music player.  And while you are listening to a good song feel free to browse the websites gallery for images that goes along with your mood,  sit back, relax and enjoy. </h2>
 		</div>
@@ -123,14 +167,16 @@
 	
 
 		<div id="footer">
-			<p style="font-size:9pt;display: inline-block;">Copyright@ NK all rights resereved!</p>
+			<p style="font-size:9pt;display: inline-block; margin-top: 10px; margin-right: 4px;">Copyright@<br> NK all rights<br> resereved!</p>
 			
 			<button id="playersizebtn" title="Expand-Collapse player" style=""></button>
 
 			<div id="footerblock">
 
 				<!-- allow="autoplay" -->
-				<iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/591040242&color=%2357b575&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&show_artwork=false"></iframe>
+				<!-- <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/591040242&color=%2357b575&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&show_artwork=false"></iframe> -->
+
+				<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/636893448&color=%2357b575&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&show_artwork=false"></iframe>
 
 			</div>
 			<script>

@@ -73,6 +73,20 @@ h2{
 
 }*/
 
+#kcfinder_div {
+    display: none;
+    position: absolute;
+    /*width: 670px;*/
+    width: 90%;
+    height: 500px;
+    background: #e0dfde;
+    border: 2px solid #3687e2;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    padding: 1px;
+}
+
 /* стили для нового загрузчика файлов_______________________________________________________________________*/
 .button{ text-decoration: none; background:#666; padding:.3em 1em; border-radius: .3em; color:#fff; }
 
@@ -169,6 +183,10 @@ form{
 
 }
 
+#info{
+  margin-top:60px;
+}
+
 #maindiv{
   /*background-color: grey;*/
   margin: auto;
@@ -186,20 +204,20 @@ form{
   /*background-color: #2c6128;*/
   
   /*background-color: rgba(223, 227, 218, 0.35);*/
-  margin: auto;
+  /*margin: auto;*/
   /*background-color: #3A544C;*/
   background-color: #1b704a;
   border-top: 1px solid darkgrey;
   border-right: 1px solid darkgrey;
-  border-left: 1px solid darkgrey;
+  /*border-left: 1px solid darkgrey;*/
   /*border: 1px solid darkgrey;*/
 
   /*width: auto;*/
   
   height: 70px;
-  width: 90%;
+  width: 100%;
   
-  /*left:0;*/
+  left:0;
   bottom:0;
   /*left:10%;*/
 
@@ -278,7 +296,8 @@ form{
 	margin-top: 35px;
     /*height: 50vh;*/
     width: 100%;
-    height: 200vh;
+    /*height: 200vh;*/
+    height: 90%;
 
     
     border-radius:4px;
